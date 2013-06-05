@@ -2,17 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>WoNeF - Traduction automatique libre de WordNet 3 vers le français</title>
+    <title>WoNeF - An automatic French Translation of WordNet 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="WoNeF: automatic French WordNet translation">
     <meta name="author" content="Quentin Pradet">
 
     <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 20px;
-        padding-bottom: 40px;
       }
 
       /* Custom container */
@@ -21,7 +20,7 @@
         max-width: 700px;
       }
       .container-narrow > hr {
-        margin: 30px 0;
+        margin: 20px 0;
       }
 
       /* Main marketing message and sign up button */
@@ -30,7 +29,6 @@
         text-align: center;
       }
       .jumbotron h1 {
-        font-size: 72px;
         line-height: 1;
       }
       .jumbotron .btn {
@@ -46,11 +44,11 @@
         margin-top: 28px;
       }
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
+      <script src="/assets/js/html5shiv.js"></script>
     <![endif]-->
 
   </head>
@@ -61,39 +59,40 @@
 
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Accueil</a></li>
-          <li><a href="#">Voir</a></li>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/try/">Try</a></li>
+          <li><a href="/documentation/">Documentation</a></li>
+          <li><a href="/data/">Data</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
-        <h3 class="muted">WoNeF : WordNet du Français</h3>
+        <h3 class="muted">WoNeF</h3>
       </div>
 
       <hr>
 
       <div class="jumbotron">
-        <h1>WoNeF</h1>
-        <p class="lead">WoNeF est une traduction automatique de WordNet réalisée à partir de dictionnaires bilingues et d'espaces sémantiques. Chacun des synsets de WordNet est rempli par des littéraux (noms, verbes, adjectifs, adverbes) français.</p>
-        <a class="btn btn-large btn-success" href="#">Visualiser WoNeF</a> <a class="btn btn-large btn-success" href="#">Télécharger WoNeF 0.1</a>
+        <h1>WoNeF · WordNet <em>du Français</em></h1>
+        <p class="lead">WoNeF is an automatic WordNet 3 translation created from bilingual dictionaries and a web-based syntactic language model. Every WordNet <a href="/documentation/#synset">synset</a> is filled with french literals (nouns, verbs, adjectives, adverbs). WoNeF is free as in freedom.</p>
+        <a class="btn btn-large btn-success" href="/try/">Try WoNeF</a>
       </div>
 
       <hr>
 
       <div class="row-fluid marketing">
         <div class="span6">
-          <h4>Versions</h4>
-          <p>Trois versions différentes sont disponibles au téléchargement : une version à <a href="#hauteprecision">haute précision</a>, une version à <a href="#hautfscore#">haut F-score</a> et une version à <a href="#hautecouverture">haute couverture</a>.</p>
+          <h4>Adapted</h4>
+          <p>Three <a href="/documentation/#versions">different versions</a> are <a href="/data/">available</a> : a high-precision version, a high F-score version and a high-coverage version.</p>
 
-          <h4>Libre</h4>
-          <p>WoNeF est sous licence Creative Commons CC-BY TODO, ce qui vous rend libre de l'utiliser comme bon vous semble. C'est aussi un projet libre : vous êtes encouragés à contribuer en signalant des erreurs ou en ajoutant de nouvelles traductions.</p>
+          <h4>Free</h4>
+            <p>WoNeF is under the <a href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.en">CC-BY SA 3.0 FR</a> license, which allows using WoNeF as you wish. It's also an open project where anyone will be able to add new translations and correct existing ones.</p>
         </div>
 
         <div class="span6">
-          <h4>Évaluations</h4>
-          <p>Les différentes versions ont été évaluées avec rigueur, la version la plus précise atteignant 93% de précision. La vérité-terrain ayant servi à l'évaluation est librement disponible.</p>
+          <h4>Evaluated</h4>
+          <p>The three versions have been <a href="/documentation/#evaluation">evaluated rigorously</a>, the most precise version reaching 93% precision. The gold-standard used for evaluation is freely available.</p>
 
           <h4>Accessible</h4>
-          <p>WoNeF est librement disponible sur Internet, mais il est aussi possible de le télécharger sous format XML. Une API Python rend son intégration très facile.</p>
+          <p>You can <a href="/try/">browse WoNeF</a> on this website, but you can also <a href="/data/">download it</a> as an XML file. The standard DEBVisDIC format maximizes its usefulness.</p>
         </div>
       </div>
 
