@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>WoNeF - An automatic French Translation of WordNet 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="WoNeF: automatic French WordNet translation">
     <meta name="author" content="Quentin Pradet">
 
     <!-- Le styles -->
@@ -12,6 +12,21 @@
     <style type="text/css">
       body {
         padding-top: 20px;
+        /* http://www.colorzilla.com/gradient-editor/ */
+        background: #fff; /* Old browsers */
+        background: -moz-linear-gradient(left, #dbe0df 0%, #ffffff 30%, #ffffff 70%, #dbe0df 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#dbe0df), color-stop(30%,#ffffff), color-stop(70%,#ffffff), color-stop(100%,#dbe0df)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* IE10+ */
+        background: linear-gradient(to right, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbe0df', endColorstr='#dbe0df',GradientType=1 ); /* IE6-9 */
+      }
+
+      /* Home link */
+      .muted a {
+        text-decoration: none;
+        color: inherit;
       }
 
       /* Custom container */
@@ -65,26 +80,25 @@
           <li class="active"><a href="/data/">Data</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <h3 class="muted">WoNeF</h3>
+        <h3 class="muted"><a href="http://wonef.fr/">WoNeF</a></h3>
       </div>
 
       <hr>
 
       <div class="jumbotron">
         <h1>WoNeF · Downloads</h1>
-        <p class="lead">Download a specific WoNeF version.</p>
-        <p class="lead">Just looking? <a href="/try/">Simply try it</a>!</p>
+        <p><a class="btn btn-large btn-success" href="http://wonef.fr/data/wonef-fscore-0.1.xml.bz2">Download (4.4M, .xml.bz2)</a></p>
       </div>
 
-      <hr>
-
       <div class="row-fluid marketing">
-        <p>Three downloads are available:</p>
-        <ul>
-            <li><a href="http://wonef.fr/data/wonef-precision-0.1.xml.zip">high precision WoNeF (5.8M, .xml.zip)</a></li>
-            <li><a href="http://wonef.fr/data/wonef-fscore-0.1.xml.zip">high F-scoreWoNeF (6.6M, .xml.zip)</a></li>
-            <li><a href="http://wonef.fr/data/wonef-coverage-0.1.xml.zip">high-coverage WoNeF (7.0M, .xml.zip)</a></li>
-        </ul>
+
+        <div class="span12">
+          <p>Other downloads:</p>
+            <ul>
+              <li>80% smaller but precise: <a href="http://wonef.fr/data/wonef-precision-0.1.xml.bz2">high precision WoNeF (3.9M, .xml.bz2)</a></li>
+              <li>Most correct translations but noisy: <a href="http://wonef.fr/data/wonef-coverage-0.1.xml.bz2">high-coverage WoNeF (4.7M, .xml.bz2)</a></li>
+            </ul>
+        </div>
       </div>
 
 
@@ -107,6 +121,17 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44868471-2', 'wonef.fr');
+      ga('send', 'pageview');
+
+    </script>
 
   </body>
 </html>

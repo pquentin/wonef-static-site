@@ -12,6 +12,21 @@
     <style type="text/css">
       body {
         padding-top: 20px;
+        /* http://www.colorzilla.com/gradient-editor/ */
+        background: #fff; /* Old browsers */
+        background: -moz-linear-gradient(left, #dbe0df 0%, #ffffff 30%, #ffffff 70%, #dbe0df 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#dbe0df), color-stop(30%,#ffffff), color-stop(70%,#ffffff), color-stop(100%,#dbe0df)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* IE10+ */
+        background: linear-gradient(to right, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbe0df', endColorstr='#dbe0df',GradientType=1 ); /* IE6-9 */
+      }
+
+      /* Home link */
+      .muted a {
+        text-decoration: none;
+        color: inherit;
       }
 
       /* Custom container */
@@ -65,23 +80,48 @@
           <li><a href="/data/">Data</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <h3 class="muted">WoNeF</h3>
+        <h3 class="muted"><a href="http://wonef.fr/">WoNeF</a></h3>
       </div>
 
        <hr>
 
-       <h1>WoNeF documentation</h1>
+       <div class="jumbotron">
+           <h1>WoNeF documentation</h1>
+       </div>
 
+        <h2>Papers</h2>
+        <p>Quentin Pradet, Gaël de Chalendar and Jeanne Baguenier Desormeaux. January 2014. <strong>WoNeF, an improved, expanded and evaluated automatic French translation of WordNet</strong>. GWC 2014 Proceedings, Tartu, Estonia. <a href="http://quentin.pradet.me/articles/pradet2014wonef.pdf">[pdf]</a></p>
+        <p>Quentin Pradet, Jeanne Baguenier-Desormeaux, Gaël de Chalendar et Laurence Danlos. <strong>WoNeF : amélioration, extension et évaluation d’une traduction française automatique de WordNet</strong>. Actes de TALN 2013, Les Sables d'Olonne, France. <a href="http://www.taln2013.org/actes/www/TALN-2013/actes/taln-2013-long-006.pdf">[pdf]</a></p>
 
         <h2 id="versions">Versions</h2>
 
-        <p>The high-precision version is not useful in itself but can serve as a test set or training data for other systems.</p> 
-        <p>The high-fscore version is the version you should choose by default.</p>
-        <p>The high-coverage version is more complete but also noisier: use it if you can reduce that noise first.</p>
+        <ul>
+            <li>The high precision version is not useful in itself but can serve as a test set or training data for other systems.</li> 
+            <li>The high F-score version is the version you should choose by default.</li>
+            <li>The high coverage version is more complete but also noisier: use it if you can reduce that noise first.</li>
+        </ul>
 
-        <h2 id="evaluation">Évaluation</h2>
+        <h2 id="evaluation">Evaluation</h2>
 
-        <p>Our gold standard contains 300 synsets for each evaluaed part-of-speech (nouns, verbs and adjectives). Two annotators produced a gold standard and agreed on the differences to produce the final gold standard.</p>
+        <p>Our gold standard contains 300 synsets for each evaluated part-of-speech (nouns, verbs and adjectives). Two annotators produced a gold standard and agreed on the differences to produce the final gold standard.</p>
+        <p>Our gold standard is included in WoNeF: all literals obtained with "wonef-gold" (the "lnote" XML field).</p>
+
+        <h2>Rules</h2>
+
+        <p>The improved edit distance used a few rules to shorten the distance between words that share the same origin in French and English:</p>
+        <ul>
+            <li>que$ -> k (banque -> bank, casque -> cask, disque -> disk)</li>
+            <li>aire$ -> ary (tertiaire -> tertiairy)</li>
+            <li>eur$ -> er (chercheur -> researcher)</li>
+            <li>ie$ -> y (cajolerie -> cajolery)</li>
+            <li>té$ -> ty (extremité -> extremity)</li>
+            <li>re$ -> er (ordre -> order, tigre -> tiger)</li>
+            <li>ais$ -> ese, aise$ -> ese, ois$ -> ese (libanaise -> lebanese)</li>
+            <li>ant$ -> ent, ant$ -> ing</li>
+            <li>er$ -> ""</li>
+            <li>osis$ -> ose (osmose -> osmose)</li>
+         </ul>
+
 
         <h2 id="glossary">Glossary</h2>
 
@@ -122,6 +162,17 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44868471-2', 'wonef.fr');
+      ga('send', 'pageview');
+
+    </script>
 
   </body>
 </html>

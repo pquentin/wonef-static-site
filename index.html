@@ -12,6 +12,21 @@
     <style type="text/css">
       body {
         padding-top: 20px;
+        /* http://www.colorzilla.com/gradient-editor/ */
+        background: #fff; /* Old browsers */
+        background: -moz-linear-gradient(left, #dbe0df 0%, #ffffff 30%, #ffffff 70%, #dbe0df 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#dbe0df), color-stop(30%,#ffffff), color-stop(70%,#ffffff), color-stop(100%,#dbe0df)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* IE10+ */
+        background: linear-gradient(to right, #dbe0df 0%,#ffffff 30%,#ffffff 70%,#dbe0df 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbe0df', endColorstr='#dbe0df',GradientType=1 ); /* IE6-9 */
+      }
+
+      /* Home link */
+      .muted a {
+        text-decoration: none;
+        color: inherit;
       }
 
       /* Custom container */
@@ -65,14 +80,14 @@
           <li><a href="/data/">Data</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <h3 class="muted">WoNeF</h3>
+        <h3 class="muted"><a href="http://wonef.fr/">WoNeF</a></h3>
       </div>
 
       <hr>
 
       <div class="jumbotron">
         <h1>WoNeF · WordNet <em>du Français</em></h1>
-        <p class="lead">WoNeF is an automatic WordNet 3 translation created from bilingual dictionaries and a web-based syntactic language model. Every WordNet <a href="/documentation/#synset">synset</a> is filled with french literals (nouns, verbs, adjectives, adverbs). WoNeF is free as in free speech.</p>
+        <p class="lead">WoNeF is an automatic <a href="http://wordnet.princeton.edu/">WordNet</a> translation to French. Every WordNet <a href="/documentation/#synset">synset</a> is filled with french literals (nouns, verbs, adjectives, adverbs). WoNeF is free as in free speech.</p>
         <a class="btn btn-large btn-success" href="/try/">Try WoNeF</a>
       </div>
 
@@ -84,12 +99,12 @@
           <p>Three <a href="/documentation/#versions">different versions</a> are <a href="/data/">available</a> : a high-precision version, a high F-score version and a high-coverage version.</p>
 
           <h4>Free</h4>
-            <p>WoNeF is under the <a href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.en">CC-BY SA 3.0 FR</a> license, which allows using WoNeF as you wish. It's also an open project where anyone will be able to add new translations and correct existing ones.</p>
+            <p>WoNeF is available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/fr/deed.en">CC-BY SA 3.0 FR</a> license.</p>
         </div>
 
         <div class="span6">
           <h4>Evaluated</h4>
-          <p>The three versions have been <a href="/documentation/#evaluation">evaluated rigorously</a>, the most precise version reaching 93% precision. The gold-standard used for evaluation is freely available.</p>
+          <p>The three versions have been <a href="/documentation/#evaluation">evaluated</a>, the most precise version reaching 93% precision. The gold-standard used for evaluation is freely available.</p>
 
           <h4>Available</h4>
           <p>You can <a href="/try/">browse WoNeF</a> on this website, but you can also <a href="/data/">download it</a> as an XML file. The standard DEBVisDIC format maximizes its usefulness.</p>
@@ -116,5 +131,15 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>-->
 
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44868471-2', 'wonef.fr');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
