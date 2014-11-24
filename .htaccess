@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^documentation/? documentation.html
+RewriteRule ^data/?$ data.html
+RewriteRule ^contact/? contact.html
+
+# deny access to the top-level git repository:
+RewriteRule \.git - [F,L]
